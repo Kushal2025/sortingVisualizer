@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Sorting Visualizer</h1>
+    <div class="controls">
+        <label for="arraySize">Number of Columns: <span id="arraySizeLabel">5</span></label>
+        <input type="range" id="arraySize" min="2" max="10" value="5" onchange="updateArraySize(this.value)">
+        <button onclick="generateArray()">Generate New Array</button>
+        <button onclick="bubbleSort()">Bubble Sort</button>
+        <button onclick="selectionSort()">Selection Sort</button>
+        <button onclick="insertionSort()">Insertion Sort</button>
+    </div>
+    <div id="array-container"></div>
+
+    <div class="algorithms">
+        <div class="algorithm">
+            <h2>Bubble Sort</h2>
+            <pre>
+1. For i from 0 to n-1:
+2.    For j from 0 to n-i-1:
+3.        If array[j] > array[j+1]:
+4.            Swap(array[j], array[j+1])
+            </pre>
+            <h3>Time Complexity:</h3>
+            <p>Best: O(n)</p>
+            <p>Average: O(n²)</p>
+            <p>Worst: O(n²)</p>
+        </div>
+        
+        <div class="algorithm">
+            <h2>Selection Sort</h2>
+            <pre>
+1. For i from 0 to n-1:
+2.    Set minIndex = i
+3.    For j from i+1 to n:
+4.        If array[j] < array[minIndex]:
+5.            Set minIndex = j
+6.    Swap(array[i], array[minIndex])
+            </pre>
+            <h3>Time Complexity:</h3>
+            <p>Best: O(n²)</p>
+            <p>Average: O(n²)</p>
+            <p>Worst: O(n²)</p>
+        </div>
+        
+        <div class="algorithm">
+            <h2>Insertion Sort</h2>
+            <pre>
+1. For i from 1 to n-1:
+2.    key = array[i]
+3.    j = i - 1
+4.    While j >= 0 and array[j] > key:
+5.        array[j + 1] = array[j]
+6.        j--
+7.    array[j + 1] = key
+            </pre>
+            <h3>Time Complexity:</h3>
+            <p>Best: O(n)</p>
+            <p>Average: O(n²)</p>
+            <p>Worst: O(n²)</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

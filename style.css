@@ -1,0 +1,98 @@
+/* style.css */
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f0f0;
+}
+
+h1 {
+    color: #333;
+}
+
+.controls {
+    margin: 20px;
+}
+
+button {
+    margin: 5px;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#array-container {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    height: 400px;
+    margin-top: 20px;
+    position: relative;
+}
+
+.array-bar {
+    margin: 0 1px; /* Smaller margins for a compact look */
+    background: linear-gradient(135deg, #4f94d4, #1d72b8);
+    border-radius: 8px; /* Increased border radius for a softer look */
+    transition: height 0.5s ease, background-color 0.5s ease, transform 0.5s ease; /* Smoother transition */
+    width: calc(100% / 10 - 2px); /* Fixed width for max 10 columns */
+}
+
+/* Color indicators */
+.array-bar.active {
+    background-color: #ff6347; /* Red for active blocks */
+}
+
+.array-bar.sorted {
+    background-color: #32cd32; /* Green for sorted elements */
+}
+
+.array-bar.swap {
+    background-color: #ffa500; /* Orange for swapped elements */
+}
+
+/* Transitioning the position of blocks */
+.animate {
+    transition: transform 0.5s ease; /* Smoother animation for block movement */
+}
+
+/* Styles for algorithms section */
+.algorithms {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.algorithm {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 0 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 200px; /* Set a fixed width for algorithm boxes */
+}
+
+h2 {
+    color: #333;
+}
+
+pre {
+    background-color: #f7f7f7;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    white-space: pre-wrap; /* Ensure wrapping of code */
+}
+
+h3 {
+    margin-top: 10px;
+    color: #555;
+}
